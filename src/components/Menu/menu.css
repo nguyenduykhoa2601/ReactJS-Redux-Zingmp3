@@ -1,0 +1,100 @@
+.menu{
+    background-color: rgb(35,27,46);
+    position: fixed;
+    height: 100vh;
+    z-index: 4;
+    width: 242px;
+    animation-duration: 2s;
+    -webkit-backface-visibility: hidden;
+}
+
+.menu__top{
+    padding-bottom: 16px;
+}
+
+.logo__menu{
+    width: 125px;
+    height: 40px;
+    margin: 15px 0 0 24px;
+    cursor: pointer;
+    content:url("https://static-zmp3.zadn.vn/skins/zmp3-v5.2/images/logo-mp-3.svg");
+}
+.logo__menu:hover{
+    opacity: 0.9;
+}
+.list__menu{
+    list-style: none;
+    padding-top: 15px;
+}
+.item__menu-link{
+    text-decoration: none;
+    color: rgb(211,216,218);
+}
+.item__menu{
+    padding: 8px 30px;
+    font-size: 1.5rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.item__menu--active{
+    background-color: rgb(57,50,67);
+}
+.item__menu:hover{
+    color: white
+}
+.item__menu-icon{
+    transform: scale(1.5);
+    
+}
+.item__menu span{
+    margin-left: 12px;
+    font-weight: 700;
+}
+.line{
+    margin: 0 20px;
+    border: 1px solid rgb(85, 84, 84);
+}
+@media (max-width: 1024px) {
+    .menu{
+        width: 72px;
+        animation-name: reponsiveMenu;
+        animation-duration: 2s;
+    }
+    .logo__menu{
+        width: 40px;
+        height: 40px;
+        margin: 20px 15px -8px 13px;
+        border-radius: 50%;
+        content: url('https://static-zmp3.zadn.vn/skins/common/logo600.png');
+    }
+    .item__menu-name{
+        display: none;
+    }
+    .item__menu{
+        padding: 20px 25px;
+    }
+    .item__menu-icon{
+        transform: scale(2);
+    }
+
+}
+
+@keyframes reponsiveMenu{
+    0%{
+        opacity: 1;
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes reponsiveMenuPC{
+    0%{
+        opacity: 1;
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

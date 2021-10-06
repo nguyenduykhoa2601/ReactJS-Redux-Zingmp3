@@ -1,0 +1,137 @@
+.topMusic {
+    color: white;
+    max-width: 100%;
+    margin: 0 36px;
+    padding-bottom: 200px;
+}
+
+
+.topMusic__table-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.topMusic__detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    padding: 10px 32px 10px 0;
+    border-radius: 10px;
+    align-items: center;
+    border-bottom: 1px solid rgb(58, 45, 45);
+}
+
+.topMusic__detail:hover {
+    background-color: rgb(47, 39, 57);
+}
+
+.topMusic__info {
+    display: flex;
+    align-items: center;
+}
+
+.topMusic__index {
+    -webkit-text-stroke: 1.5px #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: .7;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    color: rgba(74,144,226,0);
+    font-family: "Roboto",sans-serif;
+    white-space: nowrap;
+}
+ .topMusic__index-1{
+    -webkit-text-stroke: 1px #4a90e2 ;
+    opacity: 1;
+}
+ .topMusic__index-2{
+    -webkit-text-stroke: 1px #50e3c2;
+}
+.topMusic__index-3{
+    -webkit-text-stroke: 1px #e35050
+} 
+
+.topMusic__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.topMusic__detail-song {
+    align-items: center;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.topMusic__detail-name {
+    font-size: 1.4rem;
+}
+
+.topMusic__detail-singer {
+    font-size: 1.2rem;
+    color: rgb(102, 99, 99);
+}
+
+.topMusic__action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.topMusic__viewed {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(92, 90, 90)
+}
+
+.topMusic__action-icon {
+    transform: scale(1.8);
+}
+
+.topMusic__action-icon:nth-child(2) {
+    margin-left: 15px;
+}
+
+.topMusic__action-icon:nth-child(3) {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.topMusic__action-icon:hover {
+    cursor: pointer;
+    fill: rgb(128, 6, 121);
+}
+
+.topMusic__action span {
+    font-size: 1.4rem;
+    margin-top: -5px;
+}
+
+.topMusic__action span:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width: 750px) {
+    .topMusic__viewed{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .topMusic{
+        margin: 0 10px;
+    }
+    .topMusic__detail{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .topMusic__index{
+        display: none;
+    }
+}

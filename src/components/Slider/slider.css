@@ -1,0 +1,148 @@
+.slider{
+    color: white;
+    padding: 16px 50px;
+    width: 100%;
+}
+.slider__img{
+    object-fit:contain;
+    max-width: 100%;
+    
+    border-radius: 2px;
+    padding-left: 10px;
+}
+.slider__img-first{
+    animation-name:  animationFirst;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+.slider__img-body{
+    animation-name: animationBody;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.slider__img-last{
+    animation-name: animationLast;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animationFirst {
+    0%{
+        left: 0;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    10%{
+        z-index: -1;
+    }
+    33%{
+        transform: translateX(200%) translateX(32px);
+    }
+    66%{
+       left:100%;
+       transform: translateX(100%) translateX(16px);
+    }
+    100%{
+        left: 0;
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes animationBody {
+    0%{
+        opacity: 1;
+        left: 0;
+        transform: translateX(0);
+    }
+    33%{
+        left: -100%;
+        transform: translateX(-100%) translateX(-16px);
+    }
+    43%{
+        z-index: -1;
+    }
+    66%{
+        transform: translateX(100%) translateX(16px);
+    }
+    100%{
+        left: 0;
+        transform: translateX(0)
+
+    }
+}
+
+@keyframes animationLast {
+    0%{
+        left: 0;
+        transform: translateX(0);
+    }
+    33%{
+     
+        transform: translateX(-100%) translateX(-16px);
+    }
+    66%{
+        opacity: 1;
+        transform: translateX(-200%) translateX(-16px);
+    }
+    76%{
+        z-index: -1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider{
+        padding: 20px 20px;
+    }
+    .slider__img-last{
+        display: none;
+    }
+    .slider__img-first{
+        animation-name: animationFirstResponsive;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+    .slider__img-body{
+        animation-name: animationBodyResponsive;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes animationFirstResponsive {
+    0%{
+        left: 0;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50%{
+       left:100%;
+       transform: translateX(100%) translateX(16px);
+    }
+    100%{
+        left: 0;
+        transform: translateX(0);
+    }
+
+}
+@keyframes animationBodyResponsive {
+    0%{
+        opacity: 1;
+        left: 0;
+        transform: translateX(0);
+    }
+    50%{
+        left: -100%;
+        transform: translateX(-100%) translateX(-16px);
+    }
+    100%{
+        left: 0;
+        transform: translateX(0)
+
+    }
+}
